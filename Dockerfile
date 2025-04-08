@@ -29,7 +29,7 @@ COPY . .
 RUN python manage.py collectstatic --noinput
 
 # Expose port for the application
-EXPOSE 8000
+EXPOSE 5000
 
 # Start the app using gunicorn
-CMD bash -c "gunicorn auth_project.wsgi:application --bind 0.0.0.0:${PORT:-8000}"
+CMD bash -c "gunicorn auth_project.wsgi:application --bind 0.0.0.0:${PORT:-5000}"
