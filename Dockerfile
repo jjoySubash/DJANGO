@@ -32,4 +32,4 @@ RUN python manage.py collectstatic --noinput
 EXPOSE 8000
 
 # Start the app using gunicorn
-CMD ["gunicorn", "auth_project.wsgi:application", "--bind", "0.0.0.0:8000"]
+CMD ["gunicorn", "auth_project.wsgi:application", "--bind", "0.0.0.0:8080"]
